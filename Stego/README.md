@@ -49,8 +49,121 @@ Challenge link [here](https://www.hackthissite.org/missions/playit/stego/3)
 
 **HINT**: Look carefully: it's obvious, just not at first sight.
 
-As the question suggests, I wrote the python script to extract RGB values of every pixel. On observing, I found that the RGB value of most of the pixels is (62,62,62) but some of the pixels are slightly different having RGB values as (61,62,62). Then with the help of the python, I changed the RGB value of thoses to (255,255,255). The resulting png gives away the flag.
+As the question suggests, I wrote the python script to extract RGB values of every pixel. On observing, I found that the RGB value of most of the pixels is (62,62,62) but some of the pixels are slightly different having RGB values as (61,62,62). Then with the help of the python, I changed the RGB value of those pixels to (255,255,255). The resulting image gives away the password.
+
+```
+
+from PIL import Image
+
+im =Image.open('3.bmp','r')
+
+pix = im.load()
+width,height = im.size
+
+for i in range(height) :
+	for j in range(width) :
+		r,g,b = pix[j,i]
+		if r != 62 :
+			pix[j,i] = 255,255,255
+
+im.save('3solved.bmp')
+
+```
 
 ![Mission 3](3new.bmp)
 
 Password = **n38f298hsjf**
+
+----
+
+### Mission 4
+
+Challenge link [here](https://www.hackthissite.org/missions/playit/stego/4)
+
+![Mission 4](4.gif)
+
+**HINT**: I am being hexed!.
+
+I just pass the strings command through the image and see the binary digits at the end.
+
+![Mission 4](4solved.png)
+
+I use the python script to convert from binary to ASCII.
+
+```
+
+s = '0111000000110110001110000110001101110001001100010110100001100010'
+
+char = ''
+password = ''
+
+for i in range(len(s)/8) :
+	char = s[:8] 
+	password += chr(int(char,2))
+	s = s[8:]
+
+print password
+
+```
+
+Password = **p68cq1hb**
+
+----
+
+### Mission 5
+
+Challenge link [here](https://www.hackthissite.org/missions/playit/stego/5)
+
+![Mission 5](5.bmp)
+
+Status = UNSOLVED :weary:
+
+----
+
+### Mission 6
+
+Challenge link [here](http://www.hackthissite.org/missions/playit/stego/6)
+
+![Mission 6](6.png)
+
+Same as mission 4.
+
+![Mission 6](6solved.png)
+
+This time we get base64 encoded string at the end of the image. I wrote the python script to decode it.
+
+```
+
+import base64
+s = 'Tm90IGxpa2UgaXQncyBoYXJkIHRvICdkZWNyeXB0JyB0aGlzIGh1aD8gVGhlIHBhc3N3b3JkIGlzIGhnYnZadzA3Lg=='
+print base64.b64decode(s)
+
+```
+
+Result = Not like it's hard to 'decrypt' this huh? The password is hgbvZw07.
+
+Password = **hgbvZw07**
+
+----
+
+### Mission 7
+
+Challenge link [here](http://www.hackthissite.org/missions/playit/stego/7)
+
+![Mission 7](7.tif)
+
+Status = UNSOLVED :weary:
+
+----
+
+### Mission 8
+
+Challenge link [here](http://www.hackthissite.org/missions/playit/stego/8)
+
+![Mission 8](8.bmp)
+
+Same as mission 4 and 6. But this time I pass image through hd command as output of strings command is empty because default min-lenght for string in strings command is 4.
+
+![Mission 8](8solved.png)
+
+Password = **YrRot7**
