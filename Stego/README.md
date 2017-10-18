@@ -33,7 +33,7 @@ Password = **837has6**
 
 Challenge link [here](https://www.hackthissite.org/missions/playit/stego/2)
 
-This time we are given with audio file. On opening the audio file with Sonic Visualiser and adding spectrogram layer, gives away the password.
+This time we are given with audio [file](2.wav). On opening the audio file with [Sonic Visualiser](http://www.sonicvisualiser.org/) and adding spectrogram layer, gives away the password.
 
 ![Mission 2](2solved.png) 
 
@@ -51,7 +51,7 @@ Challenge link [here](https://www.hackthissite.org/missions/playit/stego/3)
 
 As the question suggests, I wrote the python script to extract RGB values of every pixel. On observing, I found that the RGB value of most of the pixels is (62,62,62) but some of the pixels are slightly different having RGB values as (61,62,62). Then with the help of the python, I changed the RGB value of those pixels to (255,255,255). The resulting image gives away the password.
 
-```
+```python
 
 from PIL import Image
 
@@ -70,7 +70,7 @@ im.save('3solved.bmp')
 
 ```
 
-![Mission 3](3new.bmp)
+![Mission 3](3solved.bmp)
 
 Password = **n38f298hsjf**
 
@@ -90,7 +90,7 @@ I just pass the strings command through the image and see the binary digits at t
 
 I use the python script to convert from binary to ASCII.
 
-```
+```python
 
 s = '0111000000110110001110000110001101110001001100010110100001100010'
 
@@ -132,7 +132,7 @@ Same as mission 4.
 
 This time we get base64 encoded string at the end of the image. I wrote the python script to decode it.
 
-```
+```python
 
 import base64
 s = 'Tm90IGxpa2UgaXQncyBoYXJkIHRvICdkZWNyeXB0JyB0aGlzIGh1aD8gVGhlIHBhc3N3b3JkIGlzIGhnYnZadzA3Lg=='
@@ -167,3 +167,62 @@ Same as mission 4 and 6. But this time I pass image through hd command as output
 ![Mission 8](8solved.png)
 
 Password = **YrRot7**
+
+----
+
+### Mission 9
+
+Challenge link [here](http://www.hackthissite.org/missions/playit/stego/9)
+
+Audio [file](9.wav)
+
+On analyzing the audio file the same way I did in mission 2 with [sonic visualiser](http://www.sonicvisualiser.org/), I saw some small dash and large dash. This gives the hint towards [Morse Code](https://en.wikipedia.org/wiki/Morse_code). Taking small dash as a dot(.), large dash as (-), small space as space and large space as (/). On decoding, we get the following Morse code.
+
+![Mission 9](9solved.png)
+
+```
+
+.---- ----- --... / ..... -.... / .---- ..--- ----- / ....- ---.. / .---- .---- ----. / ..... ...-- / ----. ---.. / ----. ---.. / .---- .---- --... / .---- .---- ...--
+
+``` 
+
+I use [this](https://morsecode.scphillips.com/translator.html) online tool to decode the morse code.
+
+***OUTPUT*** = 107 56 120 48 119 53 98 98 117 113
+
+Thinking of each decimal as their respective ASCII character I get the password.
+
+Password = **k8x0w5bbuq**
+
+----
+
+### Mission 10
+
+Challenge link [here](https://www.T H E P A S S W O R D I S N O T H E R Ehackthissite.org/missions/playit/stego/10)
+
+![Mission 10](10.jpg)
+
+In given image we see some normal letters and some **bold** letters. This arrangement is similar to [Bacon Code](https://en.wikipedia.org/wiki/Bacon%27s_cipher). Now we just need to replace the bold letters with 'b' and normal letters with 'a'.
+
+```
+
+BAABB AABBB AABAA ABBBB AAAAA BAABA BAABA BABBA ABBBA BAAAB AAABB ABAAA BAABA ABBAB ABBBA BAABB AABBB AABAA BAAAB AABAA
+
+```
+
+I use [this](https://mothereff.in/bacon) online tool with version 2 to decode the cipher.
+
+***RESULT*** = T H E P A S S W O R D I S N O T H E R E
+
+Password = **nothere**
+
+----
+
+### Mission 11
+
+Challenge link [here](https://www.hackthissite.org/missions/playit/stego/11)
+
+![Mission 11](11.png)
+
+Status = UNSOLVED :weary:
+
