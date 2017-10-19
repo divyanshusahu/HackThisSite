@@ -33,7 +33,7 @@ Password = **837has6**
 
 Challenge link [here](https://www.hackthissite.org/missions/playit/stego/2)
 
-This time we are given with audio [file](2.wav). On opening the audio file with [Sonic Visualiser](http://www.sonicvisualiser.org/) and adding spectrogram layer, gives away the password.
+This time we are given with an audio [file](2.wav). On opening the audio file with [Sonic Visualiser](http://www.sonicvisualiser.org/) and adding spectrogram layer, gives away the password.
 
 ![Mission 2](2solved.png) 
 
@@ -152,7 +152,7 @@ Challenge link [here](http://www.hackthissite.org/missions/playit/stego/7)
 
 ![Mission 7](7.tif)
 
-I use photoshop to solve this challenge. After opening thr image in adobe photoshop, I saw taht the image has three layers. Deleting the layer 1 gives away the readable password image.
+I use photoshop to solve this challenge. After opening the image in adobe photoshop, I saw that the image has three layers. Deleting the layer 1 gives away the readable password image.
 
 ![Mission 7](7solved.png)
 
@@ -210,7 +210,7 @@ In given image we see some normal letters and some **bold** letters. This arrang
 
 ```
 
-BAABB AABBB AABAA ABBBB AAAAA BAABA BAABA BABBA ABBBA BAAAB AAABB ABAAA BAABA ABBAB ABBBA BAABB AABBB AABAA BAAAB AABAA
+baabb aabbb aabaa abbbb aaaaa baaba baaba babba abbba baaab aaabb abaaa baaba abbab abbba baabb aabbb aabaa baaab aabaa
 
 ```
 
@@ -238,7 +238,7 @@ Challenge link [here](https://www.hackthissite.org/missions/playit/stego/12)
 
 ![Mission 12](12.bmp)
 
-On analyzing every pixel the same way i did in mission 3, I found the series of integers. After some trails I was able to extract a zip file from this series of integers. I wrote the following python script.
+On analyzing every pixel the same way i did in mission 3, I found the series of integers. After some time, I was able to extract a zip file from this series of integers. I wrote the following python script.
 
 ```python
 
@@ -273,7 +273,7 @@ Challenge link [here](https://www.hackthissite.org/missions/playit/stego/13)
 
 ![Mission 13](13.bmp)
 
-Status = UNSOLVED :weary;
+Status = UNSOLVED :weary:
 
 ----
 
@@ -292,10 +292,40 @@ I use [binwalk](https://github.com/devttys0/binwalk) to extract the data from th
 ![Mission 14](14key.jpg) 
 
 Cipher = PGNNZCFYXD
-Key as a = 5 and b = 10
+
+Key --> a = 5 and b = 10
 
 I use [this](http://www.dcode.fr/affine-cipher) online tool to decrypt the cipher.
 
 Password = **bulldozinj**
 
 ----
+
+### Mission 15
+
+Challenge link [here](https://www.hackthissite.org/missions/playit/stego/15)
+
+![Mission 15](15.png)
+
+Status = UNSOLVED :weary:
+
+----
+
+### Mission 16
+
+Challenge link [here](https://www.hackthissite.org/missions/playit/stego/16)
+
+![Mission 16](16.png)
+
+Status = UNSOLVED :weary:
+
+----
+
+### Mission 17
+
+Challenge link [here](https://www.hackthissite.org/missions/playit/stego/17)
+
+![Mission 17](17.jpg)
+
+Status = UNSOLVED :weary:
+
