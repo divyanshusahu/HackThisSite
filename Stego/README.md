@@ -152,7 +152,11 @@ Challenge link [here](http://www.hackthissite.org/missions/playit/stego/7)
 
 ![Mission 7](7.tif)
 
-Status = UNSOLVED :weary:
+I use photoshop to solve this challenge. After opening thr image in adobe photoshop, I saw taht the image has three layers. Deleting the layer 1 gives away the readable password image.
+
+![Mission 7](7solved.png)
+
+Password = **4aH5CEta**
 
 ----
 
@@ -198,7 +202,7 @@ Password = **k8x0w5bbuq**
 
 ### Mission 10
 
-Challenge link [here](https://www.T H E P A S S W O R D I S N O T H E R Ehackthissite.org/missions/playit/stego/10)
+Challenge link [here](https://www.hackthissite.org/missions/playit/stego/10)
 
 ![Mission 10](10.jpg)
 
@@ -226,3 +230,72 @@ Challenge link [here](https://www.hackthissite.org/missions/playit/stego/11)
 
 Status = UNSOLVED :weary:
 
+----
+
+### Mission 12
+
+Challenge link [here](https://www.hackthissite.org/missions/playit/stego/12)
+
+![Mission 12](12.bmp)
+
+On analyzing every pixel the same way i did in mission 3, I found the series of integers. After some trails I was able to extract a zip file from this series of integers. I wrote the following python script.
+
+```python
+
+from PIL import Image
+
+im = Image.open('12.bmp','r')
+width,height = im.size
+
+pix = im.load()
+text = ''
+
+for i in range(height) :
+	for j in range(width) :
+		n = pix[j,i]
+		text += chr(255-n)
+
+f = open('12.zip','w')
+f.write(text)
+f.close()
+
+```
+
+Extracting the zip file gives away the password.
+
+Password = **6ae4nt5TB**
+
+----
+
+### Mission 13 
+
+Challenge link [here](https://www.hackthissite.org/missions/playit/stego/13)
+
+![Mission 13](13.bmp)
+
+Status = UNSOLVED :weary;
+
+----
+
+### Mission 14
+
+Challenge link [here](https://www.hackthissite.org/missions/playit/stego/14)
+
+![Mission 14](14.jpg)
+
+On looking through the hex-dump of the image, I found that there is Rar archive inisde the image.
+
+![Mission 14](14solved.png)
+
+I use [binwalk](https://github.com/devttys0/binwalk) to extract the data from the image. The Rar gives *key.jpg*. After some googling I found that this it was [Affine cipher](https://en.wikipedia.org/wiki/Affine_cipher).
+
+![Mission 14](14key.jpg) 
+
+Cipher = PGNNZCFYXD
+Key as a = 5 and b = 10
+
+I use [this](http://www.dcode.fr/affine-cipher) online tool to decrypt the cipher.
+
+Password = **bulldozinj**
+
+----
