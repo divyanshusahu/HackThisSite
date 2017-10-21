@@ -88,7 +88,7 @@ Password = **420f62a2**
 
 Challenge link [here](https://www.hackthissite.org/missions/basic/7/)
 
-As said by the question there our input returns the output from the UNIX cal command. We know that the password for this level is saved in some file in the same directory. Therefore we need to input **; ls** . The **semicolon(;)** terminates the previous command **cal** and **ls** is used to list files in the directory.
+As said by the question there our input returns the output from the UNIX cal command. We know that the password for this level is saved in some file in the same directory. Therefore we need to input **; ls** as payload. The **semicolon(;)** terminates the previous command **cal** and **ls** is used to list files in the directory.
 
 ![Mission 7](files/7solved.png)
 
