@@ -24,7 +24,7 @@ Challenge link [here](https://www.hackthissite.org/missions/forensic/2/)
 
 As mentioned in the challenge statement that the image has been manipulated. So I use [this](https://29a.ch/photo-forensics/#error-level-analysis) online forensic tool to check for Error Level Analysis.
 
-![Mission 2](2solved.png)
+![Mission 2](files/2solved.png)
 
 After this, we conclude that this image is manipulated and the woman is not present in actual image. We are also able to read the password for this level.
 
