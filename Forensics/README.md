@@ -8,7 +8,7 @@ In this challenge, we have to recover the deleted files from the [disk image](fi
 
 ![Mission 1](files/1solved.png)
 
-Password of the archive is **519-555-4783**.
+Password of the archive is **5195554783**.
 
 Using this password to extract the archive we got the password of this level.
 
