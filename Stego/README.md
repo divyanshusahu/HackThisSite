@@ -13,7 +13,7 @@ On opening the file with hex-editor, we saw the series of **16** and **17** betw
 
 ![Solved Image](files/1solved.png) 
 
-It reminds me of binary and I consider 16 as 0 and 17 as 1. But the string length is 55 which is not the multiple of 8. As we know that every 8-bit binary digits represent one ASCII character. Therefore one bit is missing. After some hit and trials, I found that the missing bit is the trailing 0 of the first character. Now after decoding the binary we get the password.
+It reminds me of binary and I consider 16 as 0 and 17 as 1. But the string length is 55 which is not the multiple of 8. As we know that every 8-bit binary digits represent one ASCII character. Therefore, one bit is missing. After some hit and trials, I found that the missing bit is the trailing 0 of the first character. Now, after decoding the binary we get the password.
 
 | binary | char |
 |--------|------|
@@ -49,7 +49,7 @@ Challenge link [here](https://www.hackthissite.org/missions/playit/stego/3)
 
 **HINT**: Look carefully: it's obvious, just not at first sight.
 
-As the question suggests, I wrote the python script to extract RGB values of every pixel. On observing, I found that the RGB value of most of the pixels is (62,62,62) but some of the pixels are slightly different having RGB values as (61,62,62). Then with the help of the python, I changed the RGB value of those pixels to (255,255,255). The resulting image gives away the password.
+As the question suggests, I wrote the python script to extract RGB values of every pixel. On observing, I found that the RGB value of most of the pixels is (62,62,62) but some of the pixels are slightly different having RGB values as (61,62,62). Then, with the help of the python, I changed the RGB value of those pixels to (255,255,255). The resulting image gives away the password.
 
 ```python
 
@@ -166,7 +166,7 @@ Challenge link [here](http://www.hackthissite.org/missions/playit/stego/8)
 
 ![Mission 8](files/8.bmp)
 
-Same as mission 4 and 6. But this time I pass image through hd command as output of strings command is empty because default min-lenght for string in strings command is 4.
+Same as mission 4 and 6. But this time I pass image through hd command as output of strings command is empty because default min-length for string in strings command is 4.
 
 ![Mission 8](files/8solved.png)
 
@@ -347,7 +347,7 @@ Again looking at the hex-dump of the image, I found the hidden Rar [archive](fil
 
 ![Mission 17](files/17solved1.png)
 
-Inside archive, there is a [pdf](files/17solved3.pdf) file of 16 pages all white. Thinking of white color font, I found a base64 encrypted message on page 8.
+Inside the archive, there is a [pdf](files/17solved3.pdf) file of 16 pages all white. Thinking of white color font, I found a base64 encrypted message on page 8.
 
 ![Mission 17](files/17solved4.png)
 

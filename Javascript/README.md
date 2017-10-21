@@ -181,7 +181,7 @@ Input = **moo pwns**
 
 Challenge link [here](https://www.hackthissite.org/missions/javascript/7/)
 
-This is JS Obfuscation. I use [this](http://www.dcode.fr/javascript-unobfuscator) online tool to decode. After that with the help of the console, i was able to make the code into readable format.
+This is JS Obfuscation. I use [this](http://www.dcode.fr/javascript-unobfuscator) online tool to decode. After that, with the help of the console, i was able to make the code into readable format.
 
 ```
 
