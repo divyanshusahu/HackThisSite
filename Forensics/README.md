@@ -1,14 +1,14 @@
-# Forensics Mission
+# Forensics Missions
 
 ### Mission 1
 
 Challenge link [here](https://www.hackthissite.org/missions/forensic/1/)
 
-In this challenge, we have to recover the deleted files from the [disk image](files/image.dd). I use [AccessData FTK Imager](http://accessdata.com/) software to mount the disk image. In Linux system deleted files is stored in hidden folder *.Trash-1000*. Inside this folder, there is a lot of files and a strange looking folder named private. Inside private folder there is a password protected Rar archive named [Your new password is.rar](files/image-files-of-level-1/[root]/.Trash-1000/expunged/2026288587/private/Your-new-password-is.rar). Now looking for more information I found this [voicemail](files/image-files-of-level-1/[root]/.Trash-1000/expunged/2026288587/Voicemail-1.wav). It says 'Hi Stacy, I message a new key over to you. Use your phone number to access the file'. Now I know that the password the archive is Stacy's phone number. After more searching I found this [doc](files/image-files-of-level-1/[root]/.Trash-1000/expunged/2026288587/Termination-Allen-Smith.docx) containing Stacy's phone number.
+In this challenge, we have to recover the deleted files from the [disk image](files/image.dd). I use [AccessData FTK Imager](http://accessdata.com/) software to mount the disk image. In a Linux system deleted files are stored in a hidden folder **.Trash-1000**. Inside this folder, there is a lot of files and a strange looking folder named private. Inside the private folder there is a password protected Rar archive named [Your new password is.rar](files/image-files-of-level-1/[root]/.Trash-1000/expunged/2026288587/private/Your-new-password-is.rar). Now looking for more information I found this [voicemail](files/image-files-of-level-1/[root]/.Trash-1000/expunged/2026288587/Voicemail-1.wav). It says 'Hi Stacy, I message a new key over to you. Use your phone number to access the file'. Now I know that the password the archive is Stacy's phone number. After more searching, I found a [doc](files/image-files-of-level-1/[root]/.Trash-1000/expunged/2026288587/Termination-Allen-Smith.docx) containing Stacy phone number.
 
 ![Mission 1](files/1solved.png)
 
-Password of the archive is **5195554783**.
+The password of the archive is **5195554783**.
 
 Using this password to extract the archive we got the password of this level.
 
